@@ -10,15 +10,13 @@
   <body style = "border:2px solid black;padding: 10px; border-radius: 25px; height:100% ; background-color:#ddd">
 	
 	<script type="text/ng-template"  id="file_explorer.html">
-	
 		
 		<a href="#/{{data.name}}"><h4><i>{{data.name}}</i></h4></a>
-		
-		
+				
 		<button class = "btn btn-primary" ng-click="add(data)" style="background-color:green">Add Node</button>
-		
 		<button class = "btn btn-primary" ng-click="delete(data)" ng-show="data.nodes.length > 0" style="background-color:red">Delete Nodes</button>
 		<hr>
+		
 		<ul>
 			<li style = "margin-top:3px; margin-left: 3px" ng-repeat="data in data.nodes" ng-include="'file_explorer.html'"></li>
 			
@@ -32,8 +30,7 @@
 		</ul>
 	</div>
 
-	
     <script src="app.js"></script>
 	
-	 </body>
+  </body>
 </html>
